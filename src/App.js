@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import MyMood from "./components/MyMood";
+import {useState, useEffect} from 'react';
+
+const userEntry = [ 
+     'anxious',
+     'frustrated',
+     'discouraged',
+     'content',
+     'optimistic',
+     'energized'
+  ];
+
 
 function App() {
+  const [num, setNum] = useState(0);
+
+  useEffect(()=> {
+    alert("Your mood has displayed");
+  }, [num]);
+  function newNum() {
+    if (num < userEntry.length -1){
+      setNum(num + 1);
+    }else {
+      setNum(0);
+    }
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Mood Tracker</h1>
+      <MyMood userEntry = {newNum} />
+      <h1>Your answer indicates that you feel {userEntry[num]}.</h1>
     </div>
   );
 }
