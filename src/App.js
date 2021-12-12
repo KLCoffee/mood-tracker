@@ -19,18 +19,34 @@ const userEntry = [
 
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState(3);
 
   // useEffect(()=> {
   //   alert("Your mood has displayed");
   // }, [num]);
   function newNum() {
-    if (num < userEntry.length -1){
-      setNum(num + 1);
-    }else {
+    if (num === 0){
       setNum(0);
+    }else if (num === 1){
+      setNum(1);
+    }else if (num === 2){
+      setNum(2);
+    }else if (num === 3){
+      setNum(3);
+    }else if (num === 4){
+      setNum(4);
+    }else if (num === 5){
+      setNum(5);
+    }else if (num === 6)
+      setNum(6);
     }
-  }
+  
+  // const randomIndex = Math.floor(Math.random()* userEntry.length);setIndex(randomIndex)
+  // }
+  // function Index(){
+  //   const newIndex = userEntry.length;
+  //   setIndex(newIndex);
+  // }
   
   return (
     <div>
