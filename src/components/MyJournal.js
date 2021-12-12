@@ -1,10 +1,8 @@
-// import React from "react";
-
-function MyJournal(){
-    return (
-        <div>Journal Page</div>
-    
+function MyJournal (){
+    return(
+        <div>
+            <h1>My Journal</h1>
+        </div>
     );
-    };
-
-export default MyJournal;
+}
+export default MyJournal
