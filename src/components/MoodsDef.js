@@ -1,32 +1,46 @@
-// import React from "react";
+import React from "react";
 // import {useState} from 'react';
-//  import { 
-//   Routes, 
-//   Route,
-//  Link } from "react-router-dom";
+import { BrowserRouter as Router,
+Routes, 
+Route,
+Link } from "react-router-dom";
 function MoodsDef(){
-    return (
-    // <BrowserRouter>
-    //     <div>
-    //       <ul>
-    //           <li>
-    //               <Link to ="/app">App</Link>
-    //               </li>
-    //           <li>
-    //               <Link to ="/myjournal">Journal</Link>
-    //               </li>
-    //           <li>
-    //               <Link to ="/moods">Moods</Link>
-    //               </li>
-    //               </ul>  
-    //         {/* <Routes>
-    //             <Route exact path = "/"><App/></Route>
-    //             <Route path = "/journal"><Journal/></Route>
-    //             <Route path = "/moods"><Moods/></Route>
-    //         </Routes>
-    //         </div> */}
-    {/* </BrowserRouter> */}
+   return (
+<Router>
+<div>
+      <ul>
+              <li>
+                   <Link to ="/">App</Link>
+                 </li>
+          <li>
+          <Link to ="/myjournal">Journal</Link>
+                  </li>
+              <li>
+                  <Link to ="/mymoods">Moods</Link>
+                   </li>
+                  </ul>  
+              <Routes>
+                 {/* <Route exact path = "/"><App/></Route> */}
+             <Route path = "/myjournal">Journal</Route>
+                <Route path = "/mymoods">Moods</Route>
+          </Routes>
+ </div> 
+      </Router> 
     );
     }
-
+    // function MyJournal(){
+    //     return (
+    //         <div>
+    //             <h2>My Journal</h2>
+    //         </div>
+    //     );
+    // }
+    // function MyMoods (){
+    //     return (
+    //         <div>
+    //             <h2>My Moods</h2>
+    //         </div>
+    //     );
+    // }
+  
 export default MoodsDef;

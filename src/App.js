@@ -1,24 +1,24 @@
-import {
-Routes, 
-Route,
-Link } from "react-router-dom";import MyMood from "./components/MyMood";
+// import {
+// Routes, 
+// Route,} from "react-router-dom";
+import MyMood from "./components/MyMood";
 import MoodsDef from "./components/MoodsDef";
 import MyJournal from "./components/MyJournal";
 import {useState} from 'react';
 
 
 const userEntry = [ 
-     'anxious',
-     'frustrated',
-     'discouraged',
-     'content',
      'optimistic',
-     'energized'
+     'happy',
+     'content',
+     'discouraged',
+     'upset',
+     'depressed'
   ];
 
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState(5);
 
   function newNum() {
     if (num === 0){
@@ -39,6 +39,8 @@ function App() {
   
   return (
     <div>
+      <MoodsDef />,
+      <MyJournal />
       <h1>Mood Tracker</h1>
       <MyMood userEntry = {newNum} />
       <h1>Your answer indicates that you feel {userEntry[num]}.</h1>
@@ -55,15 +57,13 @@ function App() {
     <h1>My Defined</h1>
   </link>
   </div>
-}
+} */}
 
-
-<Routes>
+{/* <Routes>
                 <Route path = 'moodsdef' element= {<MyMood/>}/>
                 <Route path = 'myjournal'element={<MyJournal/>}/>
                 <Route path = 'moodsdef'element ={<MoodsDef/>}/>
-            </Routes>
-      </div> */}
+            </Routes> */}
       </div>
   );   
   }
